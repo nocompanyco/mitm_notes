@@ -5,7 +5,7 @@ This todo list includes mirrors original proposal the primary milestones. These 
 
 
 Alpha
-- [ ] Windows development system ready ([Windows.md])
+- [ ] Windows development system ready ([Windows.md](./Windows.md))
   * [ ] tested packet capture
   * [ ] tested electronjs framework
 - [ ] Installer
@@ -27,4 +27,4 @@ RC1
 - [ ] documentation
 - [ ] code published
 
-is a mirror of the scheduling and milestones spreadsheetfound at <https://pad.ano.la/sheet/#/2/sheet/view/KSEtCRPXDtKd+VZW+SqWSYpHEZ2QZv4x+cizKP5YYYQ/> (corrupted currently 2020.05.14)
+List is a mirror of the scheduling and milestones spreadsheet found at <https://pad.ano.la/sheet/#/2/sheet/view/KSEtCRPXDtKd+VZW+SqWSYpHEZ2QZv4x+cizKP5YYYQ/> (corrupted currently 2020.05.14)
