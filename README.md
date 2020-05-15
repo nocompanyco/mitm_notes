@@ -1,20 +1,30 @@
 
-# Roadmap
+# Roadmap / Methodology
 
-This todo list includes mirrors original proposal the primary milestones. These may change based on further conversations. (E.g. eric may have indicated a preference for certain features)
+This todo list includes mirrors original proposal the primary milestones. These may change based on further conversations.
 
+`x` = completed
+`-` = partially completed
 
 Alpha
+- [ ] Create github repository
+  * [x] for project management (this here)
+  * [ ] for code
 - [ ] Windows development system ready ([Windows.md](./Windows.md))
+  * [-] Trying Windows VM for development
   * [ ] tested packet capture
-  * [ ] tested electronjs framework
-- [ ] Installer
+  * [ ] tested electronjs framework (or [deskgap](https://deskgap.com/#whats-the-difference-between-deskgap-and-electron))
+- [ ] Installer (osx/linux/electron) 
+  * [ ] installer or simplified config
+  * [ ] ability to install without root
 - [ ] Network simplification
   * [ ] aprspoof or standard router
 - [ ] Session save/restart
 		
 Beta
-- [ ] windows sniffer code running
+- [ ] build test tools (e.g. name discovery, cpu/memory/nodejs resource monitor)
+- [ ] sniffer code ported to windows running
+- [ ] unify front-end and back-end into one code base
 - [ ] electron win/linux/osx quick install
 - [ ] sslstrip and mitm fake logins/gmail/facebook	
 - [ ] plugin framework
@@ -26,5 +36,6 @@ RC1
 - [ ] 0knowledge threat sharing/discovery
 - [ ] documentation
 - [ ] code published
+
 
 List is a mirror of the scheduling and milestones spreadsheet found at <https://pad.ano.la/sheet/#/2/sheet/view/KSEtCRPXDtKd+VZW+SqWSYpHEZ2QZv4x+cizKP5YYYQ/> (corrupted currently 2020.05.14)
