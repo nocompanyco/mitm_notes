@@ -1,7 +1,7 @@
 
 # Roadmap / Methodology
 
-This todo list mirrors original proposal the primary milestones (found in [Initial_notes.md](./Initial_Notes.md)). These may change based on further conversations.
+This todo list mirrors original proposals primary milestones (found in [Initial_notes.md](./Initial_Notes.md)). These may change based on further conversations.
 
 `x` = completed
 `-` = partially completed
