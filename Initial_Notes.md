@@ -127,6 +127,7 @@ Tasks:
   - to see all network traffic workstation with MiTM software needs to either be the primary network gateway or be connected to a network hub with the gateway so that it can see all traffic.
 * Windows
   - libpcap support on Windows is very different from Linux. The node_pcap library will not work. There is an alternative less tested cap library we can likely utilize.
+  - 
 * Security issues
   - It may be important to consider that the MiTM software will not be heavily
     maintained and so security of trainer laptops could be a concern. Affects:
@@ -181,6 +182,8 @@ https://pad.ano.la/sheet/#/2/sheet/edit/-8373R6YBZ8BVFaWe5fEDTV4/
                       https://github.com/mscdex/cap/issues/95                      
                       so works better on windows perhaps, but not as active as node_pcap
                       Send email to issue author asking their opinion
+                      - response was: "I have never used cap, though. That issue was just because I noticed it [issue in node_pcap] applied to that project too."
+                      - may look for other wrappers around npcap (currently used by wireshark) or winpcap (was used before by wireshark)
                     * windows electronjs support?
                         * root perms
                           https://github.com/electron/electron-packager/issues/87

@@ -11,9 +11,9 @@ Alpha
   * [x] for project management (this here)
   * [ ] for code
 - [ ] Windows development system ready ([Windows.md](./Windows.md))
-  * [-] Trying Windows VM for development
-  * [ ] tested packet capture
-  * [ ] tested electronjs framework (or [deskgap](https://deskgap.com/#whats-the-difference-between-deskgap-and-electron))
+  * [*] Trying Windows VM for development
+  * [x] tested packet capture
+  * [ ] tested electronjs framework (or others. see [AppFramework.md](./AppFramework.md) 
 - [ ] Installer (osx/linux/electron) 
   * [ ] installer or simplified config
   * [ ] ability to install without root
