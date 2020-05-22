@@ -4,8 +4,8 @@ TOC
 - [TODO](#todo)
 - [Windows](#windows)
   - [Npcap, winpcap nodejs libs](#npcap-winpcap-nodejs-libs)
-- [Comparability of pcap libs](#comparability-of-pcap-libs)
   - [aprspoof non-javascript windows](#aprspoof-non-javascript-windows)
+- [Comparability of pcap libs](#comparability-of-pcap-libs)
 
 
 ## TODO
@@ -39,11 +39,12 @@ Options for building our own arpspoof in node.
   - seems small enough. appears to have resolve the cap issue by putting it in a thread
   - does not have the tcpsession, dns and other parsers. just simple packet info
 
-## Comparability of pcap libs
-Compare the output nodejs pcap lib packet decoders. see `2_pcaps_compare/index.js` for test case
-
 ### aprspoof non-javascript windows
 have yet to find a nodejs implementation working on windows so we may have to write one from scratch. these other examples may be helpful.
 * https://github.com/alandau/arpspoof
   C++, arpspoofer for windows
+
+## Comparability of pcap libs
+Compare the output nodejs pcap lib packet decoders. see `2_pcaps_compare/index.js` for test case
+
 
