@@ -11,15 +11,15 @@ Alpha
   * [x] for project management (this here)
   * [ ] for code
 - [ ] Windows development system ready ([Windows.md](./Windows.md))
-  * [*] Trying Windows VM for development
+  * [x] Trying Windows VM for development
   * [x] tested packet capture
   * [ ] tested electronjs framework (or others. see [AppFramework.md](./AppFramework.md) 
 - [ ] Installer (osx/linux/electron) 
   * [ ] installer or simplified config
   * [ ] ability to install without root
 - [ ] Network simplification
-  * [ ] aprspoof or standard router
-- [ ] Session save/restart
+  * [-] aprspoof or standard router ([Arpspoof.md](./Arpspoof.md))
+- [ ] Session save/restart ([Save.md](./Save.md))
 		
 Beta
 - [ ] build test tools (e.g. name discovery, cpu/memory/nodejs resource monitor)
