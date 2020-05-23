@@ -45,6 +45,5 @@ have yet to find a nodejs implementation working on windows so we may have to wr
   C++, arpspoofer for windows
 
 ## Comparability of pcap libs
-Compare the output nodejs pcap lib packet decoders. see `2_pcaps_compare/index.js` for test case
-
+Compare the output nodejs pcap lib packet decoders. see [nocompanyco/mitm_tests/2_pcaps_compare] for test case
 
