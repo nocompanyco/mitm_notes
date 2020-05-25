@@ -19,7 +19,7 @@ Alpha
   * [ ] ability to install without root
 - [ ] Network simplification
   * [-] aprspoof or standard router ([Arpspoof.md](./Arpspoof.md))
-- [ ] Session save/restart ([Save.md](./Save.md))
+- [-] Session save/restart ([Save.md](./Save.md))
 		
 Beta
 - [ ] build test tools (e.g. name discovery, cpu/memory/nodejs resource monitor)
