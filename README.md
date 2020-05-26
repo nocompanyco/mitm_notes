@@ -47,7 +47,7 @@ RC1
 
 Website & Support
 - [ ] Setup website with github pages
-- [ ] Work with Olivier to bind Counterpart owned domain and give admin control
+- [ ] Work with the ISC technical Director to bind domain name and give admin control
 - [ ] Provide a few days of ongoing support for bugs
 
 
