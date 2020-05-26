@@ -20,7 +20,11 @@ Alpha
 - [ ] Network simplification
   * [-] aprspoof or standard router ([Arpspoof.md](./Arpspoof.md))
 - [-] Session save/restart ([Save.md](./Save.md))
-		
+
+Alpha Testing
+- [ ] Q/A tested most features and all platforms
+- [ ] Test methodology instructions
+
 Beta
 - [ ] build test tools (e.g. name discovery, cpu/memory/nodejs resource monitor)
 - [ ] sniffer code ported to windows running
@@ -30,12 +34,21 @@ Beta
 - [ ] plugin framework
 - [ ] os detect plugin
 
+Beta Testing
+- [ ] Q/A tested most features and all platforms
+- [ ] Test methodology instructions
+
 RC1 
 - [ ] testing
 - [ ] stretch: wifi ssid extract
 - [ ] 0knowledge threat sharing/discovery
 - [ ] documentation
 - [ ] code published
+
+Website & Support
+- [ ] Setup website with github pages
+- [ ] Work with Olivier to bind Counterpart owned domain and give admin control
+- [ ] Provide a few days of ongoing support for bugs
 
 
 List is a mirror of the scheduling and milestones spreadsheet found at <https://pad.ano.la/sheet/#/2/sheet/view/KSEtCRPXDtKd+VZW+SqWSYpHEZ2QZv4x+cizKP5YYYQ/> (corrupted currently 2020.05.14)
