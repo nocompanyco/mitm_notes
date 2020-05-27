@@ -21,8 +21,16 @@ if already setup
 - s systemctl start libvirtd
 - s virt-manager
 - check that 'default' network is started 
-  `s virsh net-info default`
-  `s virsh net-start default` or use GUI
+  `sudo virsh net-info br0`
+  `sudo virsh net-start br0` or use GUI
+- if issue, setup br0 again:
+  *  ip link add name br0 type bridge
+  *  ip link set br0 up
+  *  ip link set eth0 master br0
+  *  bridge link
+- either connect eth0 to router or bring up dhcp server on br0 to give host an ip
+- connect to share from nautilus or dolphin on host:  (change ip to target)
+  smb://user@192.168.20.144/Users/User/Downloads/ 
 ### Setup
 * Download WinDev2002Eval.VirtualBox (16GB) from free windows VM's 
   (https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/)
@@ -52,7 +60,7 @@ If you need install disk:
 
 # VM Test pcap
 This setup provides Windows VM with interface on network (obtain own ip from main network)
-using a bridge interface on host. Host can see traffic from guest VM. Guest VM cannot see traffic from host. I suppose if you setup network sharing in Windows VM and set all hosts to route through Windows VM IP that one would see all traffic. Or arpspoofing could be used.
+using a bridge interface on host. But it requires connecting host to a router through eth0 to get IP address. Host can see traffic from guest VM. Guest VM cannot see traffic from host. I suppose if you setup network sharing in Windows VM and set all hosts to route through Windows VM IP that one would see all traffic. Or arpspoofing could be used.
 
 - install wireshark in guest (not portable)
 - Setup a br0 interface on host and attach eth0 to it:

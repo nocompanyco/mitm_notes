@@ -14,13 +14,15 @@ Alpha
   * [x] Trying Windows VM for development
   * [x] tested packet capture
   * [ ] tested electronjs framework (or others. see [AppFramework.md](./AppFramework.md) 
-- [ ] Installer (osx/linux/electron) 
+- [-] Installer (osx/linux/electron) 
   * [ ] installer or simplified config
   * [ ] ability to install without root
 - [ ] Network simplification
   * [-] aprspoof or standard router ([Arpspoof.md](./Arpspoof.md))
 - [-] Session save/restart ([Save.md](./Save.md))
-
+Issues:
+- Npcap Windows lib [license](https://github.com/nmap/npcap/blob/master/LICENSE) for now resolve by require user install npcap
+ 
 Alpha Testing
 - [ ] Q/A tested most features and all platforms
 - [ ] Test methodology instructions
