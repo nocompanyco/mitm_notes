@@ -1,4 +1,5 @@
 Status: able to build windows installer on linux, linux installer on linux. have no tested root perms nor osx. for some reason installed windows app opens twice upon attempting to open once.
+Todo: check root installer.nsh for windows. Check how other packet capture apps on osx work and test on osx
 
 Installer
 - [x] Linux/OSX Test electron installer 
@@ -82,12 +83,16 @@ build for windows on linux
 - nsis option https://www.electron.build/configuration/nsis  
 add to build section in package.json: `"nsis": { "allowElevation": true, "oneClick": false }`
 
+PS. helpfull config examples:
+- https://github.com/mattermost/desktop/blob/master/package.json
+- https://github.com/mattermost/desktop/blob/master/electron-builder.json
+
 ## Electron.build_rootperms Attempt
 `6_install_electron.build_rootperm/`
+
 
 Test with root permissions
 - see https://github.com/electron-userland/electron-builder/issues/2227 which includes example that installs additional msi and for root its recommended to add perMachine = true
 
-PS. look into how other desktop apps handle install such as https://github.com/mattermost/desktop
- - https://github.com/mattermost/desktop/blob/master/package.json
-   - https://github.com/mattermost/desktop/blob/master/electron-builder.json
+- https://www.authentise.com/post/electron-and-uac-on-windows
+uses priv esc for windows electron install
