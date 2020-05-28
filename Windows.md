@@ -7,10 +7,25 @@ Windows setup
 3. [x] SDK test
 4. [x] Nodejs
 5. [x] Pcap test
-6. [ ] electronjs test
+6. [x] electronjs test
+7. [ ] Mirror dev enviornment on windows (backup should cross-build fail)
+
+TOC
+- [VM](#vm)
+  - [Virtualbox image to Qemu:vert-manager (status: works)](#virtualbox-image-to-qemuvert-manager-status-works)
+    - [Run](#run)
+    - [Setup](#setup)
+  - [Virtualbox image to gnome-box](#virtualbox-image-to-gnome-box)
+  - [Test pcap](#test-pcap)
+  - [setup node and test cap](#setup-node-and-test-cap)
+  - [electronjs](#electronjs)
+  - [sshd](#sshd)
+- [Laptop](#laptop)
+
 
 * https://www.electronjs.org/docs/tutorial/development-environment
 - use free windows VM's https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/
+
 
 # VM
 Need 16+33GB. 
@@ -58,7 +73,7 @@ If you need install disk:
       (downloaded to local folders)
     - gnome-boxes
 
-# VM Test pcap
+## Test pcap
 This setup provides Windows VM with interface on network (obtain own ip from main network)
 using a bridge interface on host. But it requires connecting host to a router through eth0 to get IP address. Host can see traffic from guest VM. Guest VM cannot see traffic from host. I suppose if you setup network sharing in Windows VM and set all hosts to route through Windows VM IP that one would see all traffic. Or arpspoofing could be used.
 
@@ -83,14 +98,14 @@ For SMB share smb://user@192.168.178.43/Users/User/Downloads/
 username: user  password: user
  (change assigned ip from network)
 
-# VM setup node and test cap
+## setup node and test cap
 - Node install is strait forward
 - `npm install -g cap` fails with _"missing VC++ toolkit"_ currently installing
   requires installing VS Studio C++ core and VS toolkit. We did this under 2019 packages found in Studio installer
   - requires npcap install with wincap support. This can be set when installing wireshark
 - Test: node c:\Users\User\AppData\Roaming\npm\node_modules\cap\test\test.js
 - 
-# VM electronjs
+## electronjs
 https://www.electronjs.org/docs/development/build-instructions-windows
 requires: 
 - windows 10 server  or higher? 
@@ -102,4 +117,19 @@ requires:
 - git
 - debug tools for windows
 
-# VM sshd
+## sshd
+used `choco install openssh -params '"/SSHServerFeature /KeyBasedAuthenticationFeature"'`
+
+
+# Laptop
+windows laptop with Windows Home
+user company@nocompany.co (pw:"windows......." pin:<tobechanged>)
+
+Install chocolatary through administrator powershell
+then `choco install git nvm vscode vim sudo visualstudio2019community -y`
+`choco install openssh -params '"/SSHServerFeature /KeyBasedAuthenticationFeature"'`
+`nvm install 13.11.0` `nvm use 13.11.0`
+`ssh-keygen` `cat c:\users\compa\.ssh\id_rsa.pub`
+Add your key to host .ssh authorized_keys
+Create a system restore point https://support.microsoft.com/en-ie/help/4027538/windows-create-a-system-restore-point run `sysdm.cpl` in system protection add protection to drive then create restore point
+- to run as admin via ssh use sudo or `runas /noprofile /user:Administrator "<cmd>"`
