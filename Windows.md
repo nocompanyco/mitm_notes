@@ -126,9 +126,14 @@ windows laptop with Windows Home
 user company@nocompany.co (pw:"windows......." pin:<tobechanged>)
 
 Install chocolatary through administrator powershell
-then `choco install git nvm vscode vim sudo visualstudio2019community -y`
+- ( better to install 2017 version instead of 2019 we used)
+then `choco install git nvm yarn python vscode vim sudo visualstudio2019community -y`
 `choco install openssh -params '"/SSHServerFeature /KeyBasedAuthenticationFeature"'`
-`nvm install 13.11.0` `nvm use 13.11.0`
+`nvm install 13.11.0` 
+`nvm use 13.11.0`
+`yarn config set python "c:\python38\python.exe"`
+install the c++ core features in vs2019 manual installer
+Dont do: `npm install -g --production windows-build-tools`  this will install vs2017
 `ssh-keygen` `cat c:\users\compa\.ssh\id_rsa.pub`
 Add your key to host .ssh authorized_keys
 Create a system restore point https://support.microsoft.com/en-ie/help/4027538/windows-create-a-system-restore-point run `sysdm.cpl` in system protection add protection to drive then create restore point

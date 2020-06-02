@@ -6,6 +6,7 @@ TOC
   - [Npcap, winpcap nodejs libs](#npcap-winpcap-nodejs-libs)
   - [aprspoof non-javascript windows](#aprspoof-non-javascript-windows)
 - [Comparability of pcap libs](#comparability-of-pcap-libs)
+- [Linux/Mac](#linuxmac)
 
 
 ## TODO
@@ -47,3 +48,19 @@ have yet to find a nodejs implementation working on windows so we may have to wr
 ## Comparability of pcap libs
 Compare the output nodejs pcap lib packet decoders. see [nocompanyco/mitm_tests/2_pcaps_compare] for test case
 
+## Linux/Mac
+looking through https://www.npmjs.com/search?q=arp+spoofing
+* https://github.com/skepticfx/arpjs
+  * uses cmdline arp to get tables and `node-pcap` to build packets and `node-ip` lib to get mac. Windows only. Would need to switch to cap to build packet.
+* https://github.com/skepticfx/mitmjs
+  * uses arpjs and sends poison packets every 2 seconds. Windows only. Would need to switch to cap
+* https://github.com/roccomuso/kickthemout
+  * uses `node-arp` (MIT) which uses cmdline tools to get arp table AND includes support for for windows
+  * Issues give some indication of pitfals to watch out for both in this lib and others
+    https://github.com/roccomuso/kickthemout/issues/7
+
+looking through https://www.npmjs.com/search?q=arp
+* https://github.com/nekuz0r/node-arp (MIT)
+  * uses `node-arp` (MIT) which uses cmdline tools to get arp table AND includes support for for windows
+* https://github.com/xtcel/arp-full (MIT)
+  * supports windows, pings host and reads arp table

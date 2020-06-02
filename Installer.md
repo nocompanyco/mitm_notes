@@ -59,7 +59,7 @@ notes using [electron.build](https://www.electron.build/configuration/win)
 
 go through:
 - https://github.com/electron-userland/electron-builder#buildwin
-- `yar add electron --save-dev` adds version `"electron": "^9.0.0"` to devDependencies
+- `yarn add electron --save-dev` adds version `"electron": "^9.0.0"` to devDependencies
 - Create hello world electron app
   - https://www.electronjs.org/docs/tutorial/first-app
   - create boiler plat hello world example as ^^

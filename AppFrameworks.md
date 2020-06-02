@@ -1,7 +1,3 @@
-STATUS: 
-* Todo: Test electronjs on winodws
-
-
 Notes on testing front-end Application frameworks that have javascript optionally under the hood. 
 
 
