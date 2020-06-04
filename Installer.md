@@ -23,7 +23,7 @@ Contents:
 - [Notes](#notes)
 - [Official Attempt](#official-attempt)
   - [5_install_electron](#5_install_electron)
-    - [Build with pcap](#build-with-pcap)
+    - [5_install_electron_withpcap/ -- Build with pcap](#5_install_electron_withpcap----build-with-pcap)
   - [Electron.build_rootperms Attempt](#electronbuild_rootperms-attempt)
 
 
@@ -51,7 +51,7 @@ Installer attempt/test notes using the
 
 
 ## 5_install_electron
-Test only basica hello world installer
+Test only basic hello world installer, which works.
 
 notes using [electron.build](https://www.electron.build/configuration/win)  
 - instructions have you install the builder and then try a boiler plate. 
@@ -67,7 +67,7 @@ go through:
 - now try: `yarn run pack`
 - then exec: `./dist/linux-unpacked/5_install_electron`
 - now try: `yarn run dist`
-- creates linux images
+- **creates linux images**
   
 setup to build for multiple platforms:
 - https://www.electron.build/multi-platform-build
@@ -98,19 +98,18 @@ Build for OSX
 Automated builds for OSX electron on Travis CI
 - https://studiolacosanostra.github.io/2019/03/26/Automate-electron-app-release-build-on-github-with-Travis-CI/
 
-### Build with pcap
-`5_install_electron_withpcap/`
+### 5_install_electron_withpcap/ -- Build with pcap
 - On osx we get incompatible compiled version issue 
   needed to add a dependency: `yard add electron-rebuild` and run `./node_modules/.bin/electron-rebuild` then `yarn run start` works. 
-  - Our user has admin and access_bpf as their groups so was able to access packets. Else would need to resolve the permission issues. See [Permissions_osx.md](./Permissions_osx.md)  
-
+  - Our test user already has admin and access_bpf as their groups so was able to access packets. Else would need to resolve the permission issues. See [Permissions_osx.md](./Permissions_osx.md)
+- On windows
+  set nsis installer option `perMachin` to `true` to have installer run as root ([discussion](https://github.com/electron-userland/electron-builder/issues/2227) that includes how to install sub msi)
+  see [Permissions_win.md](./Permissions_win.md) 
 
 ## Electron.build_rootperms Attempt
 `6_install_electron.build_rootperm/`
 
 
-Test with root permissions
-- see https://github.com/electron-userland/electron-builder/issues/2227 which includes example that installs additional msi and for root its recommended to add perMachine = true
 
 - https://www.authentise.com/post/electron-and-uac-on-windows
 uses priv esc for windows electron install

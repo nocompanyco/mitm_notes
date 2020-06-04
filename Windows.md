@@ -8,7 +8,7 @@ Windows setup
 4. [x] Nodejs
 5. [x] Pcap test
 6. [x] electronjs test
-7. [ ] Mirror dev enviornment on windows (backup should cross-build fail)
+7. [x] Mirror dev enviornment on windows (backup should cross-build fail)
 
 TOC
 - [VM](#vm)
@@ -21,6 +21,7 @@ TOC
   - [electronjs](#electronjs)
   - [sshd](#sshd)
 - [Laptop](#laptop)
+  - [Issues](#issues)
 
 
 * https://www.electronjs.org/docs/tutorial/development-environment
@@ -127,14 +128,27 @@ user company@nocompany.co (pw:"windows......." pin:<tobechanged>)
 
 Install chocolatary through administrator powershell
 - ( better to install 2017 version instead of 2019 we used)
-then `choco install git nvm yarn python vscode vim sudo visualstudio2019community -y`
+then `choco install git nvm yarn  vscode vim sudo visualstudio2019community gnuwin32-coreutils.install -y`
+`choco install pywin32` (or `choco install python --version=3.7.3`)
 `choco install openssh -params '"/SSHServerFeature /KeyBasedAuthenticationFeature"'`
 `nvm install 13.11.0` 
 `nvm use 13.11.0`
-`yarn config set python "c:\python38\python.exe"`
+`yarn config set python "c:\python37\python.exe"`
+or
+`yarn config set python "c:\tools\python\python.exe"`
+
 install the c++ core features in vs2019 manual installer
 Dont do: `npm install -g --production windows-build-tools`  this will install vs2017
 `ssh-keygen` `cat c:\users\compa\.ssh\id_rsa.pub`
 Add your key to host .ssh authorized_keys
 Create a system restore point https://support.microsoft.com/en-ie/help/4027538/windows-create-a-system-restore-point run `sysdm.cpl` in system protection add protection to drive then create restore point
 - to run as admin via ssh use sudo or `runas /noprofile /user:Administrator "<cmd>"`
+
+
+add C:\Program Files (x86)\GnuWin32\bin to path: `setx /M PATH "%PATH%;C:\Program Files (x86)\GnuWin32\bin"`
+
+## Issues
+- Python not installing or not found  
+  if you install the visual studio python package then when using choco it will appear to have installed but nothing is installed. 
+  you can find out the location of the python executable from the vs install by opening the python console from the start menu and `import sys; sys.executable`. Currently for me it was at c:\program files (86)\microsoft visual studio\shared\python37_64\pythonw.exe. Once the python installation is determined set thie path with `yarn config set python "c:\python37\python.exe"`
+- `Call to 'node -e "require('nan')"' returned exit status 1 while in binding.gyp`

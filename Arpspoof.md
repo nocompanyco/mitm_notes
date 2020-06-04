@@ -10,8 +10,8 @@ TOC
 
 
 ## TODO
-* [-] check comparability of decoders (node_pcap, cap)
-* [ ] test the windows libs on windows (node-capture, cap)
+* [x] check comparability of decoders (node_pcap, cap)
+* [x] test the windows libs on windows (node-capture, cap)
 * [ ] test arpspoof libs
 
 ## Windows
