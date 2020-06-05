@@ -110,6 +110,3 @@ Automated builds for OSX electron on Travis CI
 `6_install_electron.build_rootperm/`
 
 
-
-- https://www.authentise.com/post/electron-and-uac-on-windows
-uses priv esc for windows electron install

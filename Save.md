@@ -1,4 +1,8 @@
-Notes of session save and load/replay. Would be best if user can save from cached data rather than pre-configuring. For debug reasons ability to load raw pcap (from wireshark) also good.
+Conclusion: 
+- user can load pcap from wireshark, node-pcap can replay
+- user will be allowed to save json of cached data in ui and reload this
+- save and load operations do not require root so install should also not require root
+
 
 TOC
 

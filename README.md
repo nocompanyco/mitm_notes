@@ -13,16 +13,18 @@ Alpha
 - [ ] Windows development system ready ([Windows.md](./Windows.md))
   * [x] Trying Windows VM for development
   * [x] tested packet capture
-  * [ ] tested electronjs framework (or others. see [AppFramework.md](./AppFramework.md) 
-- [-] Installer (osx/linux/electron) 
+  * [X] tested electronjs framework (or others. see [AppFramework.md](./AppFramework.md) 
+- [-] Installer (osx/linux/electron) [[Installer.md](./Installer.md)]
   * [ ] installer or simplified config
   * [ ] ability to install without root
 - [ ] Network simplification
   * [-] aprspoof or standard router ([Arpspoof.md](./Arpspoof.md))
 - [-] Session save/restart ([Save.md](./Save.md))
+
 Issues:
 - Npcap Windows lib [license](https://github.com/nmap/npcap/blob/master/LICENSE) for now resolve by require user install npcap
- 
+- Windows laptop is incredibly slow, also node stopped working, may have to reinstall
+
 Alpha Testing
 - [ ] Q/A tested most features and all platforms
 - [ ] Test methodology instructions

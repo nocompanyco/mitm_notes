@@ -134,7 +134,7 @@ then `choco install git nvm yarn  vscode vim sudo visualstudio2019community gnuw
 `nvm install 13.11.0` 
 `nvm use 13.11.0`
 `yarn config set python "c:\python37\python.exe"`
-or
+or if installed choco python2 or pywin32:
 `yarn config set python "c:\tools\python\python.exe"`
 
 install the c++ core features in vs2019 manual installer
@@ -152,3 +152,10 @@ add C:\Program Files (x86)\GnuWin32\bin to path: `setx /M PATH "%PATH%;C:\Progra
   if you install the visual studio python package then when using choco it will appear to have installed but nothing is installed. 
   you can find out the location of the python executable from the vs install by opening the python console from the start menu and `import sys; sys.executable`. Currently for me it was at c:\program files (86)\microsoft visual studio\shared\python37_64\pythonw.exe. Once the python installation is determined set thie path with `yarn config set python "c:\python37\python.exe"`
 - `Call to 'node -e "require('nan')"' returned exit status 1 while in binding.gyp`
+   https://elision.design/en/blog/msbuild-error-and-missing-microsoft-cpp-default-props
+   ^^^ A lot of the common windows issues described ^^^
+   - trying: npm install --global --production windows-build-tools  
+     (if error run this outside of project directories that already have a package.json)
+     THAT FAILED. 
+     Rolling back to before we updated VSStudio
+     (see https://developercommunity.visualstudio.com/content/problem/215114/vs2017-156-update-broke-command-line-c-builds-usin.html)
