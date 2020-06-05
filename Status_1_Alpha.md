@@ -13,9 +13,9 @@ Timeline for this phase:
 * `C` are days spent on this phase
 * `D` is new Alpha delivery deadline
 
--         |  m  |  t  |  w  |  t  |  f  |  s  |  s 
-----------|:---:|:---:|:---:|:---:|:---:|:---:|:---:
-05.18 cw21|     |     |     |     |C    |C    |     
-05.25 cw22|     |C    |C    |C    |C    |     |     
-06.01 cw23|     |     |C    |C    |C    |     |     
-06.08 cw24|     |     |     |     |D    |     |     
+|-         |  m  |  t  |  w  |  t  |  f  |  s  |  s  |
+|----------|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|05.18 cw21|     |     |     |     |C    |C    |     | 
+|05.25 cw22|     |C    |C    |C    |C    |     |     | 
+|06.01 cw23|     |     |C    |C    |C    |     |     | 
+|06.08 cw24|     |     |     |     |D    |     |     | 
