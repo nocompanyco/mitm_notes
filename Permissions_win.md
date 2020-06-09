@@ -1,5 +1,7 @@
 Discussion of resolving permission issues on windows
 
+Also see [snifferjs Permissions wiki](https://github.com/cyphunk/snifferjs/wiki/User-Permissions)
+
 * Reduce trust requirement by asking user to install NPcap independently. User installs MiTM without root then and runs without root. See [wireshark](https://wiki.wireshark.org/CaptureSetup/CapturePrivileges#Windows) doc that clarifies once winpcap installed all users can read packets
 * Use root installer option to somehow gain permissions
   - according to wireshark the installation of winpcap (npcap too?) is enough to give all users permissions.

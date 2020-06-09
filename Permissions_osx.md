@@ -1,5 +1,7 @@
 Discussion of possible ways to resolve permissions for OSX
 
+Also see [snifferjs Permissions wiki](https://github.com/cyphunk/snifferjs/wiki/User-Permissions)
+
 - include apple script that executes app with admin privs: 
   - `do shell script "/Applications/Wireshark.app/Contents/MacOS/Wireshark" ¬`  
     `  with administrator privileges user name "username" password "password"`
@@ -13,3 +15,4 @@ Discussion of possible ways to resolve permissions for OSX
   - see specific attempt to use sudo-promp with cap: 
     https://github.com/jorangreef/sudo-prompt/issues/47
     conclusion: this will only work with processes. But could open process and release permissions once started, as is currently done in snifferjs
+  - suggestion here that polkit be used instead https://github.com/Microsoft/vscode/issues/50964
