@@ -44,6 +44,7 @@ Options for building our own arpspoof in node.
 have yet to find a nodejs implementation working on windows so we may have to write one from scratch. these other examples may be helpful.
 * https://github.com/alandau/arpspoof
   C++, arpspoofer for windows
+  No License.
 
 ## Comparability of pcap libs
 Compare the output nodejs pcap lib packet decoders. see [nocompanyco/mitm_tests/2_pcaps_compare] for test case
@@ -51,9 +52,13 @@ Compare the output nodejs pcap lib packet decoders. see [nocompanyco/mitm_tests/
 ## Linux/Mac
 looking through https://www.npmjs.com/search?q=arp+spoofing
 * https://github.com/skepticfx/arpjs
-  * uses cmdline arp to get tables and `node-pcap` to build packets and `node-ip` lib to get mac. Windows only. Would need to switch to cap to build packet.
+  * arppoison. uses cmdline arp to get tables (Linux/OSX only) and `node-pcap` to build packets and `node-ip` lib to get mac. Would need to switch to cap to build packet.
 * https://github.com/skepticfx/mitmjs
-  * uses arpjs and sends poison packets every 2 seconds. Windows only. Would need to switch to cap
+  * Cleanest and smallest example includes arpspoof (via arpjs) and routing setup for OSX and Linux
+  * uses arpjs and sends poison packets every 2 seconds (https://github.com/skepticfx/mitmjs/blob/master/bin/mitmjs#L31). Windows only. Would need to switch aprks to cap
+  * On  Linux and OSX the code sets up routing by exec a sysctl command
+  * For windows look into mitmproxy https://github.com/mitmproxy/mitmproxy/blob/master/mitmproxy/platform/windows.py#L370
+    which uses WinDivert/PyDivert
 * https://github.com/roccomuso/kickthemout
   * uses `node-arp` (MIT) which uses cmdline tools to get arp table AND includes support for for windows
   * Issues give some indication of pitfals to watch out for both in this lib and others

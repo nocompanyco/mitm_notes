@@ -7,9 +7,9 @@ This todo list mirrors original proposals primary milestones (found in [Initial_
 `-` = partially completed
 
 Alpha
-- [ ] Create github repository
+- [x] Create github repository
   * [x] for project management (this here)
-  * [ ] for code
+  * [x] for code
 - [ ] Windows development system ready ([Windows.md](./Windows.md))
   * [x] Trying Windows VM for development
   * [x] tested packet capture
@@ -17,9 +17,9 @@ Alpha
 - [x] Installer (osx/linux/electron) [[Installer.md](./Installer.md)]
   * [x] installer or simplified config
   * [x] ability to install without root
-- [ ] Network simplification
-  * [-] aprspoof or standard router ([Arpspoof.md](./Arpspoof.md))
-- [-] Session save/restart ([Save.md](./Save.md))
+- [x] Network simplification
+  * [x] aprspoof or standard router ([Arpspoof.md](./Arpspoof.md))
+- [ ] Session save/restart ([Save.md](./Save.md))
 
 Issues:
 - Npcap Windows lib [license](https://github.com/nmap/npcap/blob/master/LICENSE) for now resolve by require user install npcap
@@ -31,8 +31,8 @@ Alpha Testing
 
 Beta
 - [ ] build test tools (e.g. name discovery, cpu/memory/nodejs resource monitor)
-- [ ] sniffer code ported to windows running
-- [ ] unify front-end and back-end into one code base
+- [x] sniffer code ported to windows running
+- [x] unify front-end and back-end into one code base
 - [ ] electron win/linux/osx quick install
 - [ ] http intercept to fake logins
 - [ ] sslstrip and mitm fake logins/gmail/facebook	

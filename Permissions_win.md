@@ -12,3 +12,4 @@ Also see [snifferjs Permissions wiki](https://github.com/cyphunk/snifferjs/wiki/
 uses priv esc for windows electron install
   - or could try the runas `runas /user:<administrator username here> "<COMMAND>"`
     see example of nodejs wrapper for linux/mac and adapt
+* Optionally switch to LGPL windivert
