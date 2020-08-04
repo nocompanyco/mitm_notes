@@ -14,9 +14,9 @@ Alpha
   * [x] Trying Windows VM for development
   * [x] tested packet capture
   * [X] tested electronjs framework (or others. see [AppFramework.md](./AppFramework.md) 
-- [-] Installer (osx/linux/electron) [[Installer.md](./Installer.md)]
-  * [ ] installer or simplified config
-  * [ ] ability to install without root
+- [x] Installer (osx/linux/electron) [[Installer.md](./Installer.md)]
+  * [x] installer or simplified config
+  * [x] ability to install without root
 - [ ] Network simplification
   * [-] aprspoof or standard router ([Arpspoof.md](./Arpspoof.md))
 - [-] Session save/restart ([Save.md](./Save.md))
@@ -34,6 +34,7 @@ Beta
 - [ ] sniffer code ported to windows running
 - [ ] unify front-end and back-end into one code base
 - [ ] electron win/linux/osx quick install
+- [ ] http intercept to fake logins
 - [ ] sslstrip and mitm fake logins/gmail/facebook	
 - [ ] plugin framework
 - [ ] os detect plugin
